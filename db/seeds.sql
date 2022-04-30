@@ -24,12 +24,12 @@ VALUES
 INSERT INTO employee
     (first_name, last_name, role_id, manager_id)
 VALUES 
-    ('Marcus', 'Banjo', 5, ''),          
-    ('Kyle', 'White', 6, ''),          
+    ('Marcus', 'Banjo', 5, 4),          
+    ('Kyle', 'White', 6, 4),          
     ('Cindy', 'Lauper', 11, 4),          
     ('Anakin', 'Skywalker', 10, ''),          
-    ('Bubba', 'Gump', 3, ''),          
-    ('Tommy', 'Oompa', 7, ''),          
+    ('Bubba', 'Gump', 3, 4),          
+    ('Tommy', 'Oompa', 7, 4),          
     ('Joe', 'Blow', 6, 6),          
     ('Hailey', 'Scott', 4, 1),          
     ('Everett', 'Guitar', 1, 5),          
