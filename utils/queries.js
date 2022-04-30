@@ -6,6 +6,7 @@ const getAllDepartments = () => {
   db.query(sql, (err, rows) => {
     console.table(rows);
   });
+  init();
 };
 
 const getAllRoles = () => {
@@ -31,3 +32,5 @@ const getAllEmployees = () => {
     console.table(rows);
   });
 };
+
+module.exports = { getAllDepartments };
