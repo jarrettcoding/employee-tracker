@@ -1,4 +1,6 @@
 const db = require("./db/connection");
+const inquirer = require("inquirer");
+const consoleTable = require("console.table");
 
 const questions = [
   {
@@ -36,6 +38,7 @@ const getAllRoles = () => {
   db.query(sql, (err, rows) => {
     console.table(rows);
   });
+  init();
 };
 
 const getAllEmployees = () => {
@@ -48,15 +51,16 @@ const getAllEmployees = () => {
   db.query(sql, (err, rows) => {
     console.table(rows);
   });
+  init();
 };
 
 const init = function () {
   return inquirer.prompt(questions).then((inquirerChoice) => {
-    if ("See All Departments") {
+    if (inquirerChoice === "See All Departments") {
       getAllDepartments();
-    } else if ("See All Roles") {
+    } else if (inquirerChoice === "See All Roles") {
       getAllRoles();
-    } else if ("See All Employees") {
+    } else if (inquirerChoice === "See All Employees") {
       getAllEmployees();
     }
   });
